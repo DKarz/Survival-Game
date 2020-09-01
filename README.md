@@ -1,6 +1,7 @@
 
 <h1 id="city-connector">Zombi Wave Survivor Shooter</h1>
 
+<p> The game is available at the <a href="https://github.com/DKarz/fcoach">link</a></p>
 
 <p>The game was made singlehandedly during the summer holidays. I used the Godot engine to
 create this shooter. If you have ever heard about game dev, you may ask why I chose Godot
@@ -19,16 +20,16 @@ overcome each wave as zombi's stats as well as their amount rise. There is a 25-
 during which the player can use the shop to top up the inventory. The arrow below points to the destination of
 the shop. </p>
 
- <p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-4.png?raw=true">
+ <p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-6.png?raw=true">
   <br/><br/><br/>
 </p>
 <p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-5.png?raw=true">
   <br/><br/><br/>
 </p>
-<p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-6.png?raw=true">
+<p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-4.png?raw=true">
   <br/><br/><br/>
 </p>
-
+<p align="center">
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
@@ -101,7 +102,7 @@ the shop. </p>
 
 </tbody>
 </table>
- 
+</p>
     
 
 
