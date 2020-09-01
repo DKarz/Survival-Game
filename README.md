@@ -1,7 +1,7 @@
 
 <h1 id="city-connector">Zombi Wave Survivor Shooter</h1>
 
-<p> The game is available at the <a href="https://github.com/DKarz/fcoach">link</a></p>
+<p> The game is available at the <a href="https://denezio.itch.io/wave-shooter-1" target="_blank">link</a>.</p>
 
 <p>The game was made singlehandedly during the summer holidays. I used the Godot engine to
 create this shooter. If you have ever heard about game dev, you may ask why I chose Godot
