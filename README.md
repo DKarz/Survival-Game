@@ -18,7 +18,16 @@ and difficult hobby, especially for a beginner.</p>
 overcome each wave as zombi's stats as well as their amount rise. There is a 25-second break between each wave,
 during which the player can use the shop to top up the inventory. The arrow below points to the destination of
 the shop. </p>
-<h6 style="color:#ffffff; opacity: 0.0;">______</h6>
+
+ <p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-4.png?raw=true">
+  <br/><br/><br/>
+</p>
+<p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-5.png?raw=true">
+  <br/><br/><br/>
+</p>
+<p align="center"> <img width="750" src="https://github.com/DKarz/readme-media/blob/master/game1-6.png?raw=true">
+  <br/><br/><br/>
+</p>
 
 <table class="table table-striped table-bordered">
 <thead>
