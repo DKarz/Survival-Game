@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://World/ObjectShop.gd" type="Script" id=3]
+[ext_resource path="res://World/check.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="ObjectShop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -910.0
+margin_bottom = -450.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 0.17984
+margin_top = 1.5
+margin_right = 105.18
+margin_bottom = 101.5
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 0.337255, 0.670588, 0.14902, 1 )
+margin_left = 1.70792
+margin_top = 103.652
+margin_right = 104.708
+margin_bottom = 145.652
+custom_fonts/font = SubResource( 1 )
+text = "Buy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 0.0431373, 0.0431373, 1 )
+margin_left = 4.28894
+margin_top = 0.4648
+margin_right = 104.289
+margin_bottom = 14.4648
+text = "Product1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Check" type="Sprite" parent="."]
+visible = false
+position = Vector2( 56.8999, 56.7547 )
+scale = Vector2( 0.212706, 0.212706 )
+texture = ExtResource( 4 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 152.0
+margin_right = 105.0
+margin_bottom = 172.0
+text = "1000 $"
+align = 1
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

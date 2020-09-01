@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Pause.gd" type="Script" id=1]
+[ext_resource path="res://pause_bg.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
+
+[node name="Pause" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.839216 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -120.816
+margin_top = -70.7043
+margin_right = 162.184
+margin_bottom = 99.2957
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 445.266
+margin_top = 226.205
+margin_right = 586.266
+margin_bottom = 263.205
+custom_fonts/font = SubResource( 1 )
+text = "Continue"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

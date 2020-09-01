@@ -1,0 +1,243 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Paddle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/FLOOR_BIG.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Fence.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/car.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/HealthBar1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://World/Heal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Pistol_ico+.png" type="Texture" id=8]
+[ext_resource path="res://World/Wep_p.gd" type="Script" id=9]
+[ext_resource path="res://Player/rifle_ico — копия.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Player/Inventory.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/World.gd" type="Script" id=13]
+[ext_resource path="res://Sounds/mixkit-piano-horror-671.wav" type="AudioStream" id=14]
+[ext_resource path="res://World/HdgehogWood.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Player/ArmourBox.tscn" type="PackedScene" id=16]
+[ext_resource path="res://World/TheShop.tscn" type="PackedScene" id=17]
+[ext_resource path="res://World/Flashlight.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Player/pistol_ico.png" type="Texture" id=19]
+[ext_resource path="res://Player/rifle_ico.png" type="Texture" id=20]
+[ext_resource path="res://Player/arrow.png" type="Texture" id=21]
+[ext_resource path="res://Joystick.tscn" type="PackedScene" id=22]
+[ext_resource path="res://j2.png" type="Texture" id=23]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 11 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 25.0
+
+[node name="World" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="Heal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 283.167, 198.753 )
+z_index = 1
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 46.0346, 47.622 )
+z_index = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Bullets" type="Label" parent="CanvasLayer"]
+margin_left = 891.354
+margin_top = 554.639
+margin_right = 990.353
+margin_bottom = 595.639
+custom_fonts/font = SubResource( 1 )
+text = "1/49
+RELODING"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wep_p" type="TextureProgress" parent="CanvasLayer"]
+margin_left = 879.641
+margin_top = 499.217
+margin_right = 1779.64
+margin_bottom = 1019.22
+rect_scale = Vector2( 0.1, 0.1 )
+max_value = 1000.0
+value = 1000.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 19 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wep_r" type="TextureProgress" parent="CanvasLayer"]
+visible = false
+margin_left = 859.328
+margin_top = 460.248
+margin_right = 1839.32
+margin_bottom = 980.252
+rect_scale = Vector2( 0.71, 0.71 )
+max_value = 1000.0
+value = 1000.0
+texture_under = ExtResource( 10 )
+texture_progress = ExtResource( 20 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource( 12 )]
+position = Vector2( 965.099, 13.2292 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Balance" type="Label" parent="CanvasLayer"]
+margin_left = 22.6205
+margin_top = 26.9858
+margin_right = 105.62
+margin_bottom = 40.9858
+custom_fonts/font = SubResource( 2 )
+text = "Balance  -1 $"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaveLabel" type="Label" parent="CanvasLayer"]
+margin_left = 509.535
+margin_top = 3.50981
+margin_right = 647.535
+margin_bottom = 26.5098
+custom_fonts/font = SubResource( 3 )
+text = "Wave 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MSG" type="Label" parent="CanvasLayer"]
+margin_left = 103.397
+margin_top = 542.739
+margin_right = 850.397
+margin_bottom = 585.739
+custom_fonts/font = SubResource( 4 )
+text = "Here wi wil Have some messages."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+
+[node name="HealthBar" parent="CanvasLayer/Node2D" instance=ExtResource( 6 )]
+margin_left = 22.404
+margin_top = 6.71266
+margin_right = 499.404
+margin_bottom = 55.7127
+rect_scale = Vector2( 0.35, 0.3 )
+
+[node name="DirShop" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 473.336, 496.765 )
+scale = Vector2( 0.0941582, 0.0941582 )
+texture = ExtResource( 21 )
+
+[node name="Joystick" parent="CanvasLayer" instance=ExtResource( 22 )]
+position = Vector2( 118.021, 501.224 )
+
+[node name="Joystick2" parent="CanvasLayer" instance=ExtResource( 22 )]
+position = Vector2( 926.219, 398.845 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+modulate = Color( 1, 0.0901961, 0.0901961, 1 )
+position = Vector2( 736.061, 381.007 )
+scale = Vector2( 0.601547, 0.601547 )
+normal = ExtResource( 23 )
+shape = SubResource( 5 )
+action = "shoot"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 664.692, 488.923 )
+scale = Vector2( 0.552728, 0.552728 )
+normal = ExtResource( 23 )
+shape = SubResource( 6 )
+action = "reload"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 778.266, 497.14 )
+scale = Vector2( 0.462852, 0.462852 )
+normal = ExtResource( 23 )
+shape = SubResource( 7 )
+action = "chng_wep"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 136.815, 362.593 )
+shape = SubResource( 8 )
+action = "set_trap"
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 411.125, 508.091 )
+shape = SubResource( 8 )
+action = "Buy"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.027451, 0.027451, 0.027451, 1 )
+
+[node name="FLOOR_BIG" parent="." instance=ExtResource( 3 )]
+
+[node name="Fence" parent="." instance=ExtResource( 4 )]
+
+[node name="car" parent="." instance=ExtResource( 5 )]
+
+[node name="Flashlight2" parent="." instance=ExtResource( 18 )]
+position = Vector2( -55.079, 225.044 )
+
+[node name="HdgehogWood" parent="." instance=ExtResource( 15 )]
+position = Vector2( 504.795, 25.2875 )
+
+[node name="HdgehogWood2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 506.183, 139.451 )
+
+[node name="ArmourBox" parent="." instance=ExtResource( 16 )]
+position = Vector2( -152.202, 191.724 )
+
+[node name="TheShop" parent="." instance=ExtResource( 17 )]
+position = Vector2( -300, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 25.0
+one_shot = true
+autostart = true
+
+[node name="Paddle" parent="." instance=ExtResource( 2 )]
+position = Vector2( 303.067, 111.577 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -13.0
+autoplay = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="finished" from="BGM" to="." method="_on_BGM_finished"]

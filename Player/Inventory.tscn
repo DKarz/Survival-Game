@@ -1,0 +1,120 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Player/Item1.gd" type="Script" id=1]
+[ext_resource path="res://Player/Item2.gd" type="Script" id=2]
+[ext_resource path="res://Player/heal_ico.png" type="Texture" id=3]
+[ext_resource path="res://Player/Bomb_ico2.png" type="Texture" id=4]
+[ext_resource path="res://Player/heal_ico0.png" type="Texture" id=5]
+[ext_resource path="res://Player/Bomb_ico1.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Player/Inventory.gd" type="Script" id=8]
+[ext_resource path="res://Player/Czech_Hdgehog_B1.png" type="Texture" id=9]
+[ext_resource path="res://Player/Czech_Hdgehog_B2.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 70, 60 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 70, 60 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 70, 60 )
+
+[node name="Inventory" type="Node2D"]
+scale = Vector2( 1.4, 1.4 )
+z_index = 4
+script = ExtResource( 8 )
+
+[node name="Amount1" type="Label" parent="."]
+margin_left = 97.0
+margin_top = 86.0
+margin_right = 123.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount2" type="Label" parent="."]
+margin_left = 100.25
+margin_top = 213.25
+margin_right = 126.25
+margin_bottom = 234.25
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Amount3" type="Label" parent="."]
+margin_left = 101.0
+margin_top = 339.0
+margin_right = 131.0
+margin_bottom = 368.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item1" type="TextureProgress" parent="."]
+margin_left = -1.00113
+margin_right = 574.999
+margin_bottom = 494.0
+rect_scale = Vector2( 0.222, 0.23 )
+max_value = 1.0
+value = 1.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item2" type="TextureProgress" parent="."]
+margin_top = 113.737
+margin_right = 128.0
+margin_bottom = 241.737
+max_value = 1.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 4 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item3" type="TextureProgress" parent="."]
+margin_left = 1.0
+margin_top = 241.0
+margin_right = 257.0
+margin_bottom = 497.0
+rect_scale = Vector2( 0.497, 0.497 )
+max_value = 1.0
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+shape = SubResource( 3 )
+action = "Item1"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 118.693 )
+shape = SubResource( 4 )
+action = "Item2"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2( -1.07025, 240.264 )
+shape = SubResource( 5 )
+action = "Item3"

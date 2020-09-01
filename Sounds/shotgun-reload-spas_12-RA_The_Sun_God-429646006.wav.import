@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shotgun-reload-spas_12-RA_The_Sun_God-429646006.wav-8bbe32f62840b427cce3009e0c224698.sample"
+
+[deps]
+
+source_file="res://Sounds/shotgun-reload-spas_12-RA_The_Sun_God-429646006.wav"
+dest_files=[ "res://.import/shotgun-reload-spas_12-RA_The_Sun_God-429646006.wav-8bbe32f62840b427cce3009e0c224698.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Reso/PNG/Bombs/explos.png" type="Texture" id=1]
+
+[node name="Crater" type="Sprite"]
+position = Vector2( 3.8147e-06, -0.374569 )
+scale = Vector2( 1.25752, 1.25752 )
+z_as_relative = false
+texture = ExtResource( 1 )

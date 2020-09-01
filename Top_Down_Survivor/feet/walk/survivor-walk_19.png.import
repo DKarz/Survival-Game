@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/survivor-walk_19.png-0d44b87ca860aaa2e6268d7b74a4dd16.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Top_Down_Survivor/feet/walk/survivor-walk_19.png"
+dest_files=[ "res://.import/survivor-walk_19.png-0d44b87ca860aaa2e6268d7b74a4dd16.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

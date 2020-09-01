@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://j2.png" type="Texture" id=2]
+[ext_resource path="res://TouchScreenButton.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 42.0
+
+[node name="Joystick" type="Sprite"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( -120.107, -119.092 )
+scale = Vector2( 0.940041, 0.985449 )
+normal = ExtResource( 2 )
+shape = SubResource( 1 )
+script = ExtResource( 3 )

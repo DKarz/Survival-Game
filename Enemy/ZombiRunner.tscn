@@ -1,0 +1,77 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Enemy/ZombiRunner.gd" type="Script" id=1]
+[ext_resource path="res://Player/fe2.png" type="Texture" id=2]
+[ext_resource path="res://Player/fe3.png" type="Texture" id=3]
+[ext_resource path="res://Player/fe1.png" type="Texture" id=4]
+[ext_resource path="res://Enemy/export/skeleton-move_14.png" type="Texture" id=5]
+[ext_resource path="res://Enemy/export/skeleton-move_15.png" type="Texture" id=6]
+[ext_resource path="res://Enemy/export/skeleton-move_9.png" type="Texture" id=7]
+[ext_resource path="res://Enemy/export/skeleton-move_10.png" type="Texture" id=8]
+[ext_resource path="res://Enemy/export/skeleton-move_12.png" type="Texture" id=9]
+[ext_resource path="res://Enemy/export/skeleton-move_13.png" type="Texture" id=10]
+[ext_resource path="res://Enemy/export/skeleton-move_11.png" type="Texture" id=11]
+[ext_resource path="res://Enemy/export/skeleton-move_16.png" type="Texture" id=12]
+[ext_resource path="res://Enemy/export/skeleton-move_2.png" type="Texture" id=13]
+[ext_resource path="res://Enemy/export/skeleton-move_3.png" type="Texture" id=14]
+[ext_resource path="res://Enemy/export/skeleton-move_4.png" type="Texture" id=15]
+[ext_resource path="res://Enemy/export/skeleton-move_0.png" type="Texture" id=16]
+[ext_resource path="res://Enemy/cap.png" type="Texture" id=17]
+[ext_resource path="res://Enemy/export/skeleton-move_1.png" type="Texture" id=18]
+[ext_resource path="res://Enemy/export/skeleton-move_8.png" type="Texture" id=19]
+[ext_resource path="res://Enemy/export/skeleton-move_6.png" type="Texture" id=20]
+[ext_resource path="res://Enemy/export/skeleton-move_7.png" type="Texture" id=21]
+[ext_resource path="res://Enemy/export/skeleton-move_5.png" type="Texture" id=22]
+[ext_resource path="res://Enemy/Detec.tscn" type="PackedScene" id=23]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 35.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 22.3496
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="ZombiRunner" type="KinematicBody2D"]
+z_index = 1
+collision_layer = 4
+collision_mask = 6
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 7.28797, -4.9855 )
+scale = Vector2( 0.274275, 0.274275 )
+frames = SubResource( 1 )
+
+[node name="Cap" type="Sprite" parent="."]
+visible = false
+position = Vector2( 4.72471, -2.60731 )
+scale = Vector2( 0.335042, 0.335042 )
+texture = ExtResource( 17 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 30, 0 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Hit" type="AnimatedSprite" parent="."]
+modulate = Color( 0.737255, 0.188235, 0.188235, 0.6 )
+position = Vector2( 14.8437, 12.4111 )
+scale = Vector2( 0.0474094, 0.0474094 )
+frames = SubResource( 3 )
+
+[node name="Detec" parent="." instance=ExtResource( 23 )]

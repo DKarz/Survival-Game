@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://pause_bg.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Restart.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 46
+font_data = ExtResource( 2 )
+
+[node name="Restart" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -67.0
+margin_top = -59.0
+margin_right = 1092.0
+margin_bottom = 668.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 384.868
+margin_top = 171.053
+margin_right = 628.868
+margin_bottom = 226.053
+custom_fonts/font = SubResource( 1 )
+text = "YOU DIED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 0.772549, 0.356863, 0.356863, 1 )
+margin_left = 398.063
+margin_top = 424.94
+margin_right = 610.063
+margin_bottom = 476.94
+custom_fonts/font = SubResource( 2 )
+text = "RESTART"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 265.462
+margin_top = 294.085
+margin_right = 752.462
+margin_bottom = 341.085
+custom_fonts/font = SubResource( 3 )
+text = "You survived 4 waves"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+margin_left = 211.023
+margin_top = 431.025
+margin_right = 817.023
+margin_bottom = 478.025
+custom_fonts/font = SubResource( 3 )
+text = "RESTART IN FEW SECONDS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

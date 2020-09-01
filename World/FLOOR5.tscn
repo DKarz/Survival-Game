@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/wood floor 1.png" type="Texture" id=1]
+
+[node name="FLOOR5" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.666667, 0.516667 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 320, 0 )
+scale = Vector2( 0.666667, 0.516667 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 640, 0 )
+scale = Vector2( 0.666667, 0.516667 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 0, 248 )
+scale = Vector2( 0.666667, 0.516667 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 320, 248 )
+scale = Vector2( 0.666667, 0.516667 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 640, 248 )
+scale = Vector2( 0.666667, 0.516667 )
+texture = ExtResource( 1 )
+centered = false

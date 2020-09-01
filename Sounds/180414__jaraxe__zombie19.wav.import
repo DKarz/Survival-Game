@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/180414__jaraxe__zombie19.wav-98a667ca7cc50ec3b3bc4611ea8e28d0.sample"
+
+[deps]
+
+source_file="res://Sounds/180414__jaraxe__zombie19.wav"
+dest_files=[ "res://.import/180414__jaraxe__zombie19.wav-98a667ca7cc50ec3b3bc4611ea8e28d0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

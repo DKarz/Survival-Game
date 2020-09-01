@@ -1,0 +1,300 @@
+[gd_scene load_steps=75 format=2]
+
+[ext_resource path="res://Player/legs_run.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/shott.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Player/body_move.png" type="Texture" id=4]
+[ext_resource path="res://Player/body_rifle.png" type="Texture" id=5]
+[ext_resource path="res://Player/health_bar_empty.jpg" type="Texture" id=6]
+[ext_resource path="res://Player/shot.tres" type="Texture" id=7]
+[ext_resource path="res://Player/toucrh — копия (2).png" type="Texture" id=8]
+[ext_resource path="res://Player/health_bar_empty — копия.jpg" type="Texture" id=9]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_5.png" type="Texture" id=10]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_6.png" type="Texture" id=11]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_17.png" type="Texture" id=12]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_15.png" type="Texture" id=13]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_13.png" type="Texture" id=14]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_10.png" type="Texture" id=15]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_2.png" type="Texture" id=16]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_4.png" type="Texture" id=17]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_7.png" type="Texture" id=18]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_18.png" type="Texture" id=19]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_9.png" type="Texture" id=20]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_11.png" type="Texture" id=21]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_16.png" type="Texture" id=22]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_12.png" type="Texture" id=23]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_0.png" type="Texture" id=24]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_3.png" type="Texture" id=25]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_14.png" type="Texture" id=26]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_19.png" type="Texture" id=27]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_1.png" type="Texture" id=28]
+[ext_resource path="res://Top_Down_Survivor/rifle/reload/survivor-reload_rifle_8.png" type="Texture" id=29]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_7.png" type="Texture" id=30]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_10.png" type="Texture" id=31]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_3.png" type="Texture" id=32]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_0.png" type="Texture" id=33]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_1.png" type="Texture" id=34]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_4.png" type="Texture" id=35]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_6.png" type="Texture" id=36]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_11.png" type="Texture" id=37]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_13.png" type="Texture" id=38]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_5.png" type="Texture" id=39]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_2.png" type="Texture" id=40]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_9.png" type="Texture" id=41]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_14.png" type="Texture" id=42]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_12.png" type="Texture" id=43]
+[ext_resource path="res://Top_Down_Survivor/handgun/reload/survivor-reload_handgun_8.png" type="Texture" id=44]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_14.png" type="Texture" id=45]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_8.png" type="Texture" id=46]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_9.png" type="Texture" id=47]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_10.png" type="Texture" id=48]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_11.png" type="Texture" id=49]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_12.png" type="Texture" id=50]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_13.png" type="Texture" id=51]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_0.png" type="Texture" id=52]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_1.png" type="Texture" id=53]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_3.png" type="Texture" id=54]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_2.png" type="Texture" id=55]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_4.png" type="Texture" id=56]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_5.png" type="Texture" id=57]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_6.png" type="Texture" id=58]
+[ext_resource path="res://Top_Down_Survivor/knife/meleeattack/survivor-meleeattack_knife_7.png" type="Texture" id=59]
+[ext_resource path="res://Player/aim.png" type="Texture" id=60]
+[ext_resource path="res://Sounds/370251__eflexmusic__full-reload-of-a-pistol-mixed.wav" type="AudioStream" id=61]
+[ext_resource path="res://Sounds/trigg.wav" type="AudioStream" id=62]
+[ext_resource path="res://Sounds/pistol.wav" type="AudioStream" id=63]
+[ext_resource path="res://Sounds/345560__inspectorj__footsteps-stones-a.wav" type="AudioStream" id=64]
+[ext_resource path="res://Sounds/329606__inspectorj__footsteps-puddles-d.wav" type="AudioStream" id=65]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 35.7086
+
+[sub_resource type="Animation" id=2]
+resource_name = "Move"
+length = 21.0
+step = 5.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.1
+
+[sub_resource type="Animation" id=4]
+length = 21.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Legs:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 21.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "move_rifle"
+length = 20.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body_rifle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+}
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 29 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 14 ), ExtResource( 26 ), ExtResource( 13 ), ExtResource( 22 ), ExtResource( 12 ), ExtResource( 19 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Animate",
+"speed": 22.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 40 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 39 ), ExtResource( 36 ), ExtResource( 30 ), ExtResource( 44 ), ExtResource( 41 ), ExtResource( 31 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 38 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "Animate",
+"speed": 21.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "Animate",
+"speed": 22.0
+} ]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 30
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.749146, -6.3678 )
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -9.50972, 8.67137 )
+enabled = true
+cast_to = Vector2( 800, 0 )
+collision_mask = 14
+
+[node name="ShotSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ANIMLEGS" type="AnimationPlayer" parent="."]
+anims/Move = SubResource( 2 )
+anims/idle = SubResource( 3 )
+anims/move_legs = SubResource( 4 )
+
+[node name="Legs" type="Sprite" parent="."]
+position = Vector2( 3.9553, -4.47104 )
+scale = Vector2( 0.297528, 0.42343 )
+texture = ExtResource( 1 )
+hframes = 20
+frame = 19
+
+[node name="Body" type="Sprite" parent="."]
+position = Vector2( 3.45627, -14.512 )
+scale = Vector2( 0.398839, 0.415384 )
+texture = ExtResource( 4 )
+hframes = 20
+
+[node name="ANIMBODY" type="AnimationPlayer" parent="."]
+anims/move = SubResource( 5 )
+anims/move_rifle = SubResource( 6 )
+
+[node name="Body_rifle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 18.672, -15.2339 )
+rotation = 0.0174533
+scale = Vector2( 0.418566, 0.418566 )
+texture = ExtResource( 5 )
+vframes = 5
+hframes = 4
+frame = 19
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 179.632, 0.0399799 )
+rotation = -0.0349066
+scale = Vector2( 0.7, 0.9 )
+z_index = 1
+texture = ExtResource( 8 )
+color = Color( 1, 1, 1, 0.564706 )
+shadow_enabled = true
+shadow_item_cull_mask = 15
+
+[node name="ShotEffect" type="Light2D" parent="."]
+visible = false
+light_mask = 15
+position = Vector2( 81.588, 6.7 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+color = Color( 0.929412, 0.756863, 0.243137, 1 )
+
+[node name="Prog" type="Node2D" parent="."]
+
+[node name="Progress" type="TextureProgress" parent="Prog"]
+visible = false
+margin_left = -44.1885
+margin_top = -65.2047
+margin_right = 432.812
+margin_bottom = -16.2047
+rect_scale = Vector2( 0.2, 0.2 )
+value = 50.0
+rounded = true
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reloading_rifle" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 17.0801, -13.5441 )
+scale = Vector2( 0.419391, 0.419391 )
+frames = SubResource( 7 )
+animation = "Animate"
+
+[node name="reloading_pistol" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 2.28702, -11.9693 )
+scale = Vector2( 0.407015, 0.413863 )
+frames = SubResource( 8 )
+animation = "Animate"
+
+[node name="knife_attack" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 14.2732, 5.41739 )
+scale = Vector2( 0.373962, 0.373962 )
+frames = SubResource( 9 )
+animation = "Animate"
+
+[node name="KnifeAttackRay" type="RayCast2D" parent="."]
+modulate = Color( 0.196078, 0.780392, 0.176471, 1 )
+position = Vector2( -1.41581, -2.59566 )
+enabled = true
+cast_to = Vector2( 78, 0 )
+collision_mask = 38
+
+[node name="BulletPoint" type="Node2D" parent="."]
+position = Vector2( 50.0914, 7.27891 )
+
+[node name="Aim" type="Sprite" parent="."]
+position = Vector2( 82.1502, 12.4674 )
+scale = Vector2( 0.355157, 0.559402 )
+texture = ExtResource( 60 )
+
+[node name="ReloadSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 61 )
+volume_db = -7.629
+pitch_scale = 0.85
+attenuation = 2.14355
+
+[node name="TriggerSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 62 )
+volume_db = -2.294
+
+[node name="PisAu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 63 )
+
+[node name="Walk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 64 )
+volume_db = -4.588
+
+[node name="Puddle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 65 )
+volume_db = -5.353
+[connection signal="animation_finished" from="knife_attack" to="." method="_on_knife_attack_animation_finished"]
+[connection signal="finished" from="TriggerSound" to="." method="_on_TriggerSound_finished"]
+[connection signal="finished" from="PisAu" to="." method="_on_PisAu_finished"]

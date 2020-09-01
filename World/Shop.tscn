@@ -1,0 +1,223 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://pause_bg.png" type="Texture" id=1]
+[ext_resource path="res://World/Shop.gd" type="Script" id=2]
+[ext_resource path="res://World/ObjectShop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/STAT.gd" type="Script" id=4]
+[ext_resource path="res://Player/weapon-icon-17.png" type="Texture" id=5]
+[ext_resource path="res://Reso/PNG/Decor_Items/Czech_Hdgehog_B.png" type="Texture" id=6]
+[ext_resource path="res://Player/heal_ico.png" type="Texture" id=7]
+[ext_resource path="res://Player/Bomb_ico.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Player/kn.png" type="Texture" id=10]
+[ext_resource path="res://World/bul_pistol.png" type="Texture" id=11]
+[ext_resource path="res://World/bul_rif.png" type="Texture" id=12]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Speed_Bonus.png" type="Texture" id=13]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Coin_A.png" type="Texture" id=14]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Coin_B.png" type="Texture" id=15]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Debuff_Icon.png" type="Texture" id=16]
+[ext_resource path="res://Reso/PNG/Bonus_Items/HP_Debuff.png" type="Texture" id=17]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Attack_Icon.png" type="Texture" id=18]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Ammunition_Icon.png" type="Texture" id=19]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Mobility_Icon.png" type="Texture" id=20]
+[ext_resource path="res://Reso/PNG/Bonus_Items/Ammunition_Bonus.png" type="Texture" id=21]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 9 )
+
+[node name="Shop" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.686275 )
+margin_left = -48.0
+margin_top = -64.0
+margin_right = 1104.0
+margin_bottom = 697.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STATUS" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="ObjectShop" parent="." instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 272.0
+margin_top = 64.0
+margin_right = 272.0
+margin_bottom = 64.0
+name_prd = "Rifle"
+multi = false
+dis = "Gives Rifle"
+price = 1000
+asset = ExtResource( 5 )
+
+[node name="ObjectShop2" parent="." instance=ExtResource( 3 )]
+margin_left = 872.0
+margin_top = 64.0
+margin_right = -38.0
+margin_bottom = -386.0
+name_prd = "Hedgehog 3"
+dis = "3 hedgehogs that temporarily stop enemies."
+price = 50
+asset = ExtResource( 6 )
+
+[node name="ObjectShop3" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 248.0
+margin_right = -638.0
+margin_bottom = -202.0
+name_prd = "Bandages"
+dis = "Gives +50 to health"
+price = 60
+asset = ExtResource( 7 )
+
+[node name="ObjectShop4" parent="." instance=ExtResource( 3 )]
+margin_left = 752.0
+margin_top = 64.0
+margin_right = -158.0
+margin_bottom = -386.0
+name_prd = "Bomb"
+dis = "+1 bomb"
+price = 100
+asset = ExtResource( 8 )
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 944.0
+margin_top = 8.0
+margin_right = 1016.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+text = "EXIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ObjectShop1" parent="." instance=ExtResource( 3 )]
+margin_left = 392.0
+margin_top = 64.0
+margin_right = -518.0
+margin_bottom = -386.0
+name_prd = "Knife"
+multi = false
+dis = "Allows to knife enemies and break hedgehogs"
+price = 150
+asset = ExtResource( 10 )
+
+[node name="ObjectShop5" parent="." instance=ExtResource( 3 )]
+margin_left = 512.0
+margin_top = 64.0
+margin_right = -398.0
+margin_bottom = -386.0
+name_prd = "Pistol Bullets"
+dis = "+30 pistol Bullets"
+price = 100
+asset = ExtResource( 11 )
+
+[node name="ObjectShop6" parent="." instance=ExtResource( 3 )]
+margin_left = 632.0
+margin_top = 64.0
+margin_right = -278.0
+margin_bottom = -386.0
+name_prd = "Rifle Bullets"
+dis = "+24 rifle bullets"
+price = 200
+asset = ExtResource( 12 )
+
+[node name="ObjectShop7" parent="." instance=ExtResource( 3 )]
+margin_left = 392.0
+margin_top = 248.0
+margin_right = -518.0
+margin_bottom = -202.0
+name_prd = "Speed Perk"
+multi = false
+dis = "Increases player's move speed"
+price = 500
+asset = ExtResource( 13 )
+
+[node name="ObjectShop8" parent="." instance=ExtResource( 3 )]
+margin_left = 512.0
+margin_top = 248.0
+margin_right = -398.0
+margin_bottom = -202.0
+name_prd = "Coin"
+dis = "Each zombie cost *2  as expensive"
+price = 450
+asset = ExtResource( 14 )
+
+[node name="ObjectShop10" parent="." instance=ExtResource( 3 )]
+margin_left = 752.0
+margin_top = 248.0
+margin_right = -158.0
+margin_bottom = -202.0
+name_prd = "Health l.1"
+dis = "+ 100 to max health"
+price = 500
+asset = ExtResource( 16 )
+
+[node name="ObjectShop9" parent="." instance=ExtResource( 3 )]
+margin_left = 632.0
+margin_top = 248.0
+margin_right = -278.0
+margin_bottom = -202.0
+name_prd = "Coins"
+dis = "Each zombie cost *4 as expensive"
+price = 650
+asset = ExtResource( 15 )
+
+[node name="ObjectShop11" parent="." instance=ExtResource( 3 )]
+margin_left = 872.0
+margin_top = 248.0
+margin_right = -38.0
+margin_bottom = -202.0
+name_prd = "Health l.2"
+dis = "+ 200 to max health"
+price = 650
+asset = ExtResource( 17 )
+
+[node name="ObjectShop12" parent="." instance=ExtResource( 3 )]
+margin_left = 272.0
+margin_top = 424.0
+margin_right = -638.0
+margin_bottom = -26.0
+name_prd = "Improved Bombs"
+multi = false
+dis = "Increases the target area"
+price = 700
+asset = ExtResource( 18 )
+
+[node name="ObjectShop13" parent="." instance=ExtResource( 3 )]
+margin_left = 392.0
+margin_top = 424.0
+margin_right = -518.0
+margin_bottom = -26.0
+name_prd = "Bandolier+"
+dis = "Allows to have greater amount of bullets in the bandolier."
+price = 450
+asset = ExtResource( 19 )
+
+[node name="ObjectShop14" parent="." instance=ExtResource( 3 )]
+margin_left = 632.0
+margin_top = 424.0
+margin_right = -278.0
+margin_bottom = -26.0
+name_prd = "Armor-piercing bullets"
+dis = "More damage to enemies"
+price = 550
+asset = ExtResource( 21 )
+
+[node name="ObjectShop15" parent="." instance=ExtResource( 3 )]
+margin_left = 512.0
+margin_top = 424.0
+margin_right = -398.0
+margin_bottom = -26.0
+name_prd = "Fast hands"
+dis = "Allows to use items faster"
+price = 450
+asset = ExtResource( 20 )
+[connection signal="pressed" from="Exit" to="STATUS" method="_on_Exit_pressed"]

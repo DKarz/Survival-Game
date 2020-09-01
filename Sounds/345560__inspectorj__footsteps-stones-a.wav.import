@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/345560__inspectorj__footsteps-stones-a.wav-766da35e27db48f5cd21c138ab11759d.sample"
+
+[deps]
+
+source_file="res://Sounds/345560__inspectorj__footsteps-stones-a.wav"
+dest_files=[ "res://.import/345560__inspectorj__footsteps-stones-a.wav-766da35e27db48f5cd21c138ab11759d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

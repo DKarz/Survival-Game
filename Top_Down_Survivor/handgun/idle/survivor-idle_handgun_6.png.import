@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/survivor-idle_handgun_6.png-41a25ed1e6a584b4369bff71d0f99fe8.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Top_Down_Survivor/handgun/idle/survivor-idle_handgun_6.png"
+dest_files=[ "res://.import/survivor-idle_handgun_6.png-41a25ed1e6a584b4369bff71d0f99fe8.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
